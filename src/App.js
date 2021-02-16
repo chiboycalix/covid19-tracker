@@ -10,7 +10,7 @@ import { sortData, prettyPrintStat } from './util';
 import 'leaflet/dist/leaflet.css';
 
 function App() {
-	const [countries, setCountries] = React.useState(['USA', 'UK', 'INDIA']);
+	const [countries, setCountries] = React.useState([]);
 	const [country, setCountry] = React.useState('worldwide');
 	const [countryInfo, setCountryInfo] = React.useState({});
 	const [tableData, setTableData] = React.useState([]);
@@ -39,7 +39,11 @@ function App() {
 			.then((data) => {
 				setCountry(countryCode);
 				setCountryInfo(data);
-				setMapCenter([data?.countryInfo?.lat, data?.countryInfo?.long]);
+				if (countryCode !== 'worldwide') {
+					setMapCenter([data?.countryInfo?.lat, data?.countryInfo?.long]);
+				} else {
+					setMapCenter([34.80746, -40.4796])
+				}
 				setMapZoom(4);
 			});
 	};

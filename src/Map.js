@@ -6,7 +6,6 @@ import './map.css';
 import { showDataOnMap } from './util';
 
 const MapC = ({ countries, casesType, center, zoom }) => {
-	console.log({ casesType });
 	return (
 		<div className="map">
 			<Map className="markercluster-map" center={center} zoom={zoom}>

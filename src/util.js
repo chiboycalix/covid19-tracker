@@ -33,7 +33,6 @@ export const sortData = (data) => {
 
 // draw circles on the map with interactive tooltip
 export const showDataOnMap = (data, casesType = 'cases') => {
-	console.log({ casesType });
 	return data.map((country, index) => {
 		return (
 			<Circle
