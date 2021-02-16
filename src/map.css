@@ -9,7 +9,7 @@
 .map .leaflet-container {
   height: 100%;
 }
-.info-flag img {
+.info-flag {
   width: 100px;
   border-radius: 5px;
 }
@@ -25,7 +25,7 @@
 }
 
 .info-flag {
-  height: 80px;
+  height: 150px;
   width: 100%;
   background-size: cover;
   border-radius: 8px;
